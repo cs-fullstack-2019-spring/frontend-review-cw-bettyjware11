@@ -1,0 +1,41 @@
+body {
+    margin: 10% 20%
+}
+
+.container {
+    display: grid;
+
+    grid-gap: 1px;
+    grid-template-areas:
+        "header" "header"
+        "section" "section"
+        "footer" "footer"
+
+}
+
+/*header that goes halfway across the screen and blank on the other half*/
+header  {
+
+    grid-column: 1/7;
+    grid-row: 1;
+}
+
+/*section that goes all the way across the screen on the second row*/
+section  {
+
+    grid-column: 1/13;
+    grid-row: 2;
+}
+
+/*footer that is blank on the first half */
+footer  {
+    grid-column: 7/13;
+    grid-row: 3;
+}
+
+header,section,footer
+{
+    background: aqua;
+    border: 1px solid black;
+    border-radius: 10px;
+}
